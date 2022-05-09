@@ -27,7 +27,7 @@ class _NavigationBaseScreenState extends State<NavigationBaseScreen> {
           controller: pageController,
           physics: const NeverScrollableScrollPhysics(),
           children: <Widget>[
-            HomeScreen(selectedPage: 0),
+            HomeScreen(selectedPage: 1),
             HomeScreen(selectedPage: 0),
             HomeScreen(selectedPage: 2)
           ],
