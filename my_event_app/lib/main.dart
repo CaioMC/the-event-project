@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_event_app/blocs/filter_bloc.dart';
 import 'package:my_event_app/blocs/home_bloc.dart';
 import 'package:my_event_app/ui/login-option/login-option_screen.dart';
 import 'package:my_event_app/ui/login/login_screen.dart';
@@ -39,17 +40,19 @@ class _MyState extends State<MyApp> {
       providers: [
         ChangeNotifierProvider(create: (_) => UserBloc()),
         ChangeNotifierProvider(create: (_) => HomeBloc()),
+        ChangeNotifierProvider(create: (_) => FilterBloc()),
       ],
       child: MaterialApp(
         title: 'ME - My Event',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            primaryColor: _primaryColor,
-            scaffoldBackgroundColor: Colors.white,
-            inputDecorationTheme: InputDecorationTheme(),
-            fontFamily: GoogleFonts.roboto().fontFamily,
-            visualDensity: VisualDensity.adaptivePlatformDensity,
-            appBarTheme: const AppBarTheme(elevation: 0)),
+          primaryColor: _primaryColor,
+          scaffoldBackgroundColor: Colors.white,
+          inputDecorationTheme: InputDecorationTheme(),
+          fontFamily: GoogleFonts.roboto().fontFamily,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          appBarTheme: const AppBarTheme(elevation: 0),
+        ),
         initialRoute: "/splashScreen",
         onGenerateRoute: (settings) {
           switch (settings.name) {

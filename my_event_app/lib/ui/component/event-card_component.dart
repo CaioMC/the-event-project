@@ -13,7 +13,7 @@ class EventCardComponent extends StatelessWidget {
       required this.place,
       required this.confirmedPeople,
       required this.interestedPeople,
-      required  this.price,
+      required this.price,
     }
   );
 
